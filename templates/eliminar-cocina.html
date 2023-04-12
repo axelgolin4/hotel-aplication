@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'css/registrar-entrada-style.css' %}">
+    <title>HOTEl</title>
+</head>
+
+<body>
+    <div class="register-entrance">
+        <div class="form-container">
+            <h1 class="title">ELIMINAR</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                <h3>¿Desea eliminar el registro de {{ cocina.producto }}?</h3>
+                <button type="submit">Si, eliminar</button>
+
+                <a href={% url 'listar_cocina' %}>Cancelar </a>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

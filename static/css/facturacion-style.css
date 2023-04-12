@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+header {
+  background-color: #fd7400;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.navbar-facturacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+
+.nav-leftside figure img {
+  width: 150px;
+}
+
+.nav-rightside {
+  justify-content: end;
+  display: flex;
+}
+.nav-rightside .nav-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.nav-rightside .nav-item-container li {
+  list-style: none;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 35px;
+}
+
+main {
+  display: flex;
+}
+aside {
+  background-color: #fd7400;
+  width: 15%;
+  height: 85vh;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+  font-size: 2rem;
+  
+}
+
+aside a{
+    color: white;
+    text-decoration: none;
+    font-family: "Signika", sans-serif;
+    width:100%;
+    height: 50px;
+    padding: 15px;
+    
+    border-bottom: 1px solid white;
+    text-align: left;
+    cursor: pointer;
+}
+section {
+  width: 100%;
+  padding: 20px;
+}
+.main-title h1 {
+  /* font-size: 3rem; */
+  color: #2c302e;
+  font-size: 48px;
+  font-family: "Signika", sans-serif;
+  padding-bottom: 10px;
+}
+
+
+.main-facturacion .top-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-facturacion .top-buttons .right-buttons{
+    display: flex;
+    justify-content:flex-end;
+}
+.main-facturacion .top-buttons button{
+    background-color: #001a4d;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-family: "Signika", sans-serif;
+}
+.top-inputs .input-container p input, select{
+    border: 1px solid #ccc ;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+    display: block;
+    margin-top: 5px;
+}
+
+.middle-inputs .input-container p input, select{
+    border: 1px solid #ccc ;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+    display: block;
+    margin-top: 5px;
+}
+
+.room-buttons-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-buttons-inputs button{
+    margin-left: 20px;
+    padding: 0 80px;
+    border-radius: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.first-button{
+    background-color: green;
+}
+.second-button{
+    background-color: red;
+}
+
+.table-info{
+    margin-top: 30px;
+    font-size: inherit;
+    font-family: inherit;
+    border-collapse: collapse;
+    border-spacing: 0 ;
+    width: 100%;
+    
+
+}
+
+.table-info tbody{
+display: table-row-group;
+    vertical-align: middle;
+    border-color: #feca00;
+}
+
+.table-info tr:nth-child(odd){
+    background-color: #fff;
+}
+.table-info tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.table-info th{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #030000;
+    color: white;
+    padding: 8px;
+    font-family:"Signika", sans-serif;
+}
+
+.table-info tr td{
+    color: #030000;
+    font-size:1.3rem;
+    text-align: center;
+    font-family: inherit;
+    padding: 8px;
+}
+
+.bottom-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 50px auto;
+    position: absolute;
+    bottom: 0px;
+}
+
+.bottom-buttons button{
+    background-color: #001a4d;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    
+}
+
+footer {
+  background-color: #fd7400;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+}

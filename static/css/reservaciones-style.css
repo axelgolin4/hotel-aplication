@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background-color: #fd7400;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.navbar-reservaciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+}
+
+.nav-leftside figure img {
+  width: 150px;
+}
+
+.nav-rightside {
+  justify-content: end;
+  display: flex;
+}
+.nav-rightside .nav-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.nav-rightside .nav-item-container li {
+  list-style: none;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.title h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: #111;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+.icon {
+  width: 35px;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  background-color: #fd7400;
+  width: 12%;
+  height: 85vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+aside a {
+  color: white;
+  text-decoration: none;
+  font-family: "Signika", sans-serif;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+
+  border-bottom: 1px solid white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  padding: 20px;
+}
+
+.top-buttons {
+  /* width: 1000px; */
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 1fr; */
+}
+.top-buttons button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+.top-buttons button:first-child {
+  background-color: green;
+}
+
+.top-buttons button:last-child {
+  background-color: red;
+}
+
+.top-buttons a {
+  text-decoration: none;
+  color: white;
+}
+
+.search-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.search-input input{
+  position:relative;
+  font-size: 1.5em;
+  background-color: #e9ecef;
+  color: #343a40;
+  padding: 8px 8px;
+  display: inline-block;
+  border-radius: 9999em;
+  width: 60%;
+}
+.search-input button{
+  color: #0099CC;
+  background: transparent;
+  border: 2px solid #0099CC;
+  border-radius: 20px;
+  padding: 8px 8px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 4px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+}
+
+.search-input button:hover {
+  background-color: #008CBA;
+      color: white;
+}
+
+
+.table-info{
+  margin-top: 30px;
+  font-size: inherit;
+  font-family: inherit;
+  border-collapse: collapse;
+  border-spacing: 0 ;
+  width: 100%;
+  border-radius: .4em;
+
+}
+
+.table-info tbody{
+display: table-row-group;
+  vertical-align: middle;
+  border-color: #feca00;
+}
+
+.table-info tr:nth-child(odd){
+  background-color: #fff;
+}
+.table-info tr{
+  border-bottom: 1px solid #ddd;
+}
+
+.table-info th{
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: #030000;
+  color: white;
+  padding: 8px;
+  font-family:"Signika", sans-serif;
+}
+
+.table-info tr td{
+  color: #030000;
+  font-size:1.3rem;
+  text-align: center;
+  font-family: inherit;
+  padding: 8px;
+}

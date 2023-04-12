@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'css/registrar-salida-style.css' %}">
+    
+    <title>HOTEl</title>
+</head>
+
+<body>
+    <div class="register-entrance">
+        <div class="form-container">
+            <h1 class="title">Registrar Salida</h1>
+            <form action="" class="register-entrance-form">
+                
+                <label for="nombre" class="product-label">
+                    <span><b>Producto</b><br></span>
+                    <input type="text" nombre="nombre" id="nombre" autocomplete="name" required>
+                </label>
+                <label for="">
+                    <span><b>Proveedor</b><br></span>
+                    <input type="text" nombre="proveedor" id="proveedor" autocomplete="name" required>
+                </label>
+                <label for="">
+                    <span><b>Cantidad</b><br></span>
+                    <input type="number" nombre="cantidad" id="cantidad" required>
+                </label>
+
+            </form>
+            <div class="form-buttons">
+                <button type="submit">Guardar</button>
+                <button type="submit"> <a href="./inventario-insumos.html"> Regresar</a></button>
+                <button type="submit"> <a href="./main.html">Salir</a> </button>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
