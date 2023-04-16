@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
 }
 header {
-  background-color: #fd7400;
+  background-color: #51D1F6;
   border-bottom: 2px solid #f4f4f4;
 }
 
@@ -66,7 +66,7 @@ main {
   display: flex;
 }
 aside {
-  background-color: #fd7400;
+  background-color: #51D1F6;
   width: 15%;
   height: 85vh;
   display: flex;

@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 
-from .forms import InsumosForm, CocinaForm, BlancosForm
-from .models import Insumos, Cocina, Blancos
+from .forms import InsumosForm
+from .models import Insumos
 # Create your views here.
 
 def index(request):
@@ -16,12 +16,6 @@ def inventario(request):
 def inventario_insumos(request):
     return render(request, 'inventario-insumos.html')
 
-def inventario_blancos(request):
-    return render(request, 'inventario-blancos.html')
-
-def inventario_cocina(request):
-    return render(request, 'inventario-cocina.html')
-    
 def registrar_entrada(request):
     return render(request, 'registrar-entrada.html')
 
@@ -71,82 +65,4 @@ def eliminar_insumos(request,id):
     return render(request,'eliminar-insumos.html', {'insumos':insumos})
 
 #------------------------------------------COCINA------------------------------------------
-def Cocina_view(request):
-    
-    form = CocinaForm()
-    
-    if request.method == 'POST':
-        form = CocinaForm(request.POST)
-        if form.is_valid():
-            form.save()
-    
-    context = {'form': form}
-    return render( request,'registrar-entradac.html',context)
 
-
-def listar_cocina(request):
-    cocina = Cocina.objects.all().order_by('id')
-
-    data = {
-        'cocina':cocina
-    }
-    return render(request, 'inventario-cocina.html', data)
-
-
-def editar_cocina(request,id):
-    cocina = Cocina.objects.get(id=id)
-    if request.method == 'GET':
-        form = CocinaForm(instance=cocina)
-    else:
-        form = CocinaForm(request.POST, instance=cocina)
-        if form.is_valid():
-            form.save()
-        return HttpResponseRedirect(reverse("listar_cocina"))
-    return render(request, 'registrar-entradac.html', {'form':form})
-
-def eliminar_cocina(request,id):
-    cocina = Cocina.objects.get(id=id)
-    if request.method == 'POST':
-        cocina.delete()
-        return HttpResponseRedirect(reverse("listar_cocina"))
-    return render(request,'eliminar-cocina.html', {'cocina':cocina})
-
-#------------------------------------------BLANCOS------------------------------------------
-def Blancos_view(request):
-    
-    form = BlancosForm()
-    
-    if request.method == 'POST':
-        form = BlancosForm(request.POST)
-        if form.is_valid():
-            form.save()
-    
-    context = {'form': form}
-    return render( request,'registrar-entradab.html',context)
-
-
-def listar_blancos(request):
-    blancos = Blancos.objects.all().order_by('id')
-
-    data = {
-        'blancos':blancos
-    }
-    return render(request, 'inventario-blancos.html', data)
-
-def editar_blancos(request,id):
-    blancos = Blancos.objects.get(id=id)
-    if request.method == 'GET':
-        form = BlancosForm(instance=blancos)
-    else:
-        form = BlancosForm(request.POST, instance=blancos)
-        if form.is_valid():
-            form.save()
-        return HttpResponseRedirect(reverse("listar_blancos"))
-    return render(request, 'registrar-entradab.html', {'form':form})
-
-def eliminar_blancos(request,id):
-    blancos = Blancos.objects.get(id=id)
-    if request.method == 'POST':
-        blancos.delete()
-        return HttpResponseRedirect(reverse("listar_blancos"))
-    return render(request,'eliminar-blancos.html', {'blancos':blancos})
