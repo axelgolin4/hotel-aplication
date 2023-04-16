@@ -84,13 +84,24 @@ WSGI_APPLICATION = 'HotelAnnainn.wsgi.application'
 
 
 #Configuracion MYSQL
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'redes',
+#        'USER': 'root',
+#        'PASSWORD': 'root',
+#        'PORT': '3306'
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'redes',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'root',
-        'PORT': '3306'
+        'PASSWORD': 'H863pdwBCN72ltOCeATV',
+        'HOST': 'containers-us-west-195.railway.app',
+        'PORT': '7393'
     }
 }
 
